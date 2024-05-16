@@ -78,6 +78,7 @@ var modal = document.getElementById("myModal");
 // Get the button that opens the modal
 var btn = document.querySelector(".open-modal-btn");
 
+
 // Get the <span> element that closes the modal
 var span = document.querySelector(".close-btn");
 
@@ -95,5 +96,22 @@ span.onclick = function () {
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+    }
+}
+
+const iconModal = document.getElementById("iconModal")
+const iconbtn = document.querySelector(".btn-open-icon")
+
+iconbtn.onclick = function () {
+    iconModal.style.display = "flex";
+}
+
+const closeBtnMap = document.querySelector(".modal-content-map")
+closeBtnMap.onclick = function () {
+    iconModal.style.display = "none"
+}
+window.onclick = function (evewnt) {
+    if (event.target == iconModal) {
+        iconModal.style.display = "none"
     }
 }
