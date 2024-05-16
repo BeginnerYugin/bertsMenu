@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Front-End Page</title>
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body style="background-color:rgb(195, 205, 223);">
+    <header class="header-box">
+        <h1 class="sud_anTxt">CHOOSE YOUR SUD AN</h1>
+
+        <p style="color :rgb(0, 0, 0)"> Strictly no Walk-In
+            <br> Just Run-In </br>
+        <p>Text: 0912 ikaw na bahala sa pito</p>
+        </p>
+
+
+    </header>
+    <main>
+
+        <h1 style="color :rgb(0, 0, 0);">MENU</h1>
+
+        <div class="grid-container">
+            <div class="image-container">
+                <figure>
+                    <img src="./pakbet.jpg" alt="PAKBET WITH KABET" class=" picture">
+                    <figcaption>PAKBET WITH KABET</figcaption>
+                    <div>
+                        <div class="form-container">
+                            <form>
+                                <div class="alignSelf">
+                                    <div class="form-group">
+                                        <div class="pricee">Price per Order: ₱ 25.00</div>
+                                        <label class="quantity">Quantity:</label>
+                                        <input type="number" id="quantity" name="quantity" min="0" step="1"
+                                            oninput="calculateTotalForPakbet()">
+                                    </div>
+
+                                    <div class="form-group price-info">
+                                        <span class="total-price">Total Price: <span
+                                                id="totalPakbet">₱0.00</span></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <img src="./mongo.jpg" alt="MONGO NA GULAY">
+                    <figcaption>MONGO NA GULAY</figcaption>
+                    <div class="form-container">
+                        <form>
+                            <div class="alignSelf">
+                                <div class="form-group">
+                                    <div class="pricee">Price per Order: ₱ 35.00</div>
+                                    <label class="quantity">Quantity:</label>
+                                    <input type="number" id="quantity1" name="quantity1" min="0" step="1"
+                                        oninput="calculateTotalForMongo()">
+                                </div>
+
+                                <div class="form-group price-info">
+                                    <span class="total-price">Total Price: <span id="totalMongo">₱0.00</span></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </figure>
+
+                <figure>
+                    <img src="./bihon.jpg" alt="BIHON NA LAMIIH">
+                    <figcaption>BIHON NA LAMIIH</figcaption>
+                    <div class="form-container">
+                        <form>
+                            <div class="alignSelf">
+                                <div class="form-group">
+                                    <div class="pricee">Price per Order: ₱ 30.00</div>
+                                    <label class="quantity">Quantity:</label>
+                                    <input type="number" id="quantity2" name="quantity2" min="0" step="1"
+                                        oninput="calculateTotalForBihon()">
+                                </div>
+
+                                <div class="form-group price-info">
+                                    <span class="total-price">Total Price: <span id="totalBihon">₱0.00</span></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </figure>
+            </div>
+            <div class="image-container">
+                <figure>
+                    <img src="./curry.jpg" alt="CURRY TUMIRA NG TRES" class=" picture">
+                    <figcaption>CURRY TUMIRA NG TRES</figcaption>
+                    <div>
+                        <div class="form-container">
+                            <form>
+                                <div class="alignSelf">
+                                    <div class="form-group">
+                                        <div class="pricee">Price per Order: ₱ 35.00</div>
+                                        <label class="quantity3">Quantity:</label>
+                                        <input type="number" id="quantity3" name="quantity3" min="0" step="1"
+                                            oninput="calculateTotalForCurry()">
+                                    </div>
+
+                                    <div class="form-group price-info">
+                                        <span class="total-price">Total Price: <span id="totalCurry">₱0.00</span></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <img src="./kilawin.jpg" alt="KILAWIN TIKA UNYA" class=" picture">
+                    <figcaption>KILAWIN TIKA UNYA</figcaption>
+                    <div>
+                        <div class="form-container">
+                            <form>
+                                <div class="alignSelf">
+                                    <div class="form-group">
+                                        <div class="pricee">Price per Order: ₱ 45.00</div>
+                                        <label class="quantity4">Quantity:</label>
+                                        <input type="number" id="quantity4" name="quantity4" min="0" step="1"
+                                            oninput="calculateTotalForKilawin()">
+                                    </div>
+
+                                    <div class="form-group price-info">
+                                        <span class="total-price">Total Price: <span
+                                                id="totalKilawin">₱0.00</span></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </figure>
+
+                <figure>
+                    <img src="./sinigang.jpg" alt="SINIGANGBANG" class=" picture">
+                    <figcaption>SINIGANGBANG</figcaption>
+                    <div>
+                        <div class="form-container">
+                            <form>
+                                <div class="alignSelf">
+                                    <div class="form-group">
+                                        <div class="pricee">Price per Order: ₱ 40.00</div>
+                                        <label class="quantity5">Quantity:</label>
+                                        <input type="number" id="quantity5" name="quantity5" min="0" step="1"
+                                            oninput="calculateTotalForSinigang()">
+                                    </div>
+
+                                    <div class="form-group price-info">
+                                        <span class="total-price">Total Price: <span
+                                                id="totalSinigang">₱0.00</span></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </div>
+
+        <h2>
+            <div id="">Total: <span id="total"></span></div>
+
+        </h2>
+</body>
+
+
+</main>
+<footer class="footer">
+    <div>
+        <section>
+            <h2>About Us</h2>
+            <p>This system is for reservation of Sud-an Ni Bert</p>
+            <p>I-RESERVE PERO IKAW LUTO</p>
+        </section>
+    </div>
+    <div>
+        <section>
+            <h2>Contact</h2>
+            <p>Email: BERTS123@gmail.com</p>
+            <p>Phone: 09123456789</p>
+        </section>
+    </div>
+    <div>
+        <section>
+            <h2>Location</h2>
+            <p>Santiago Boulevard</p>
+            <p>&copy; Developer Eugene Chris Elmido</p>
+        </section>
+    </div>
+
+
+
+</footer>
+<script src="./index.js"></script>
+</body>
+
+</html>
