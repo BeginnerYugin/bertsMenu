@@ -193,3 +193,11 @@ footer section p {
 .icon {
     width: 20px;
 }
+
+.divideMap {
+    display: flex;
+}
+
+.padding-top {
+    padding-top: 2px;
+}
