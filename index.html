@@ -167,10 +167,13 @@
 
         <h2>
             <div id="">Total: <span id="total"></span></div>
-
         </h2>
-        <div class="modal-center">
-            <button class="open-modal-btn">RESERVE ORDER</button>
+        <!-- button -->
+        <div class="modal-center modal-hide-and-show" id="modal-hide-and-show">
+            <button class="open-modal-btn" id="BotttonMoDiha">RESERVE ORDER</button>
+        </div>
+        <div class="modal-center modal-hide-and-show-buang" id="modal-hide-and-show-buang">
+            <button class="open-modal-btn-buang" id="open-modal-btn-buang">RESERVE ORDER</button>
         </div>
         <br>
         <br>
@@ -184,6 +187,27 @@
                 <p>WAIT UNTIL NEXT DAY</p>
 
             </div>
+        </div>
+
+        <!-- The Buang Modal -->
+
+
+        <div id="myModalBuang" class="modalBuang">
+            <!-- Modal content -->
+            <span onclick="document.getElementById('myModalBuang').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+
+            <form class="modal-content-buang" action="/action_page.php">
+                <div class="container">
+                    <span class="close-btn-buang">&times;</span>
+                    <h2>AYAW PAGDALI WALA PAKA KA PILI</h2>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn">Cancel</button>
+                        <button type="button" class="deletebtn">Delete</button>
+                    </div>
+                </div>
+            </form>
         </div>
 </body>
 
