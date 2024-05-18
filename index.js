@@ -5,12 +5,13 @@ const fixedPrice4 = 35;
 const fixedPrice5 = 45;
 const fixedPrice6 = 40;
 
-let finaltotalBihon = 0;
 let finaltotalPakbet = 0;
 let finaltotalMongo = 0;
+let finaltotalBihon = 0;
 let finaltotalCurry = 0;
 let finaltotalKilawin = 0;
 let finaltotalSinigang = 0;
+let BotttonMoDiha = document.getElementById('BotttonMoDiha');
 
 function calculateTotalForPakbet() {
   const quantity = document.getElementById("quantity").value;
@@ -18,7 +19,7 @@ function calculateTotalForPakbet() {
   finaltotalPakbet = total;
   document.getElementById("totalPakbet").innerText =
     "₱" + (isNaN(total) ? 0 : total.toFixed(2));
-  updateButtonVisibility();
+  calculateTotal();
 }
 
 function calculateTotalForMongo() {
@@ -27,7 +28,7 @@ function calculateTotalForMongo() {
   finaltotalMongo = total;
   document.getElementById("totalMongo").innerText =
     "₱" + (isNaN(total) ? 0 : total.toFixed(2));
-  updateButtonVisibility();
+  calculateTotal();
 }
 
 function calculateTotalForBihon() {
@@ -36,7 +37,7 @@ function calculateTotalForBihon() {
   finaltotalBihon = total;
   document.getElementById("totalBihon").innerText =
     "₱" + (isNaN(total) ? 0 : total.toFixed(2));
-  updateButtonVisibility();
+  calculateTotal();
 }
 
 function calculateTotalForCurry() {
@@ -45,7 +46,7 @@ function calculateTotalForCurry() {
   finaltotalCurry = total;
   document.getElementById("totalCurry").innerText =
     "₱" + (isNaN(total) ? 0 : total.toFixed(2));
-  updateButtonVisibility();
+  calculateTotal();
 }
 
 function calculateTotalForKilawin() {
@@ -54,7 +55,7 @@ function calculateTotalForKilawin() {
   finaltotalKilawin = total;
   document.getElementById("totalKilawin").innerText =
     "₱" + (isNaN(total) ? 0 : total.toFixed(2));
-  updateButtonVisibility();
+  calculateTotal();
 }
 
 function calculateTotalForSinigang() {
@@ -63,28 +64,9 @@ function calculateTotalForSinigang() {
   finaltotalSinigang = total;
   document.getElementById("totalSinigang").innerText =
     "₱" + (isNaN(total) ? 0 : total.toFixed(2));
-  updateButtonVisibility();
+  calculateTotal();
 }
 
-function updateButtonVisibility() {
-  const btnReserve = document.getElementById("BotttonMoDiha");
-  const divBuang = document.getElementById("modal-hide-and-show-buang");
-
-  if (
-    finaltotalPakbet == 0 &&
-    finaltotalMongo == 0 &&
-    finaltotalBihon == 0 &&
-    finaltotalCurry == 0 &&
-    finaltotalKilawin == 0 &&
-    finaltotalSinigang == 0
-  ) {
-    btnReserve.classList.add("hidden");
-    divBuang.classList.remove("hidden");
-  } else {
-    btnReserve.classList.remove("hidden");
-    divBuang.classList.add("hidden");
-  }
-}
 function calculateTotal() {
   const total =
     finaltotalPakbet +
@@ -93,75 +75,101 @@ function calculateTotal() {
     finaltotalCurry +
     finaltotalKilawin +
     finaltotalSinigang;
-  // Display the total
   document.getElementById("total").innerText = "₱ " + total.toFixed(2);
 }
 
-// Initial calculation to set the default total
-calculateTotal();
+BotttonMoDiha.addEventListener('click', function () {
+  if (
+    finaltotalPakbet == 0 &&
+    finaltotalMongo == 0 &&
+    finaltotalBihon == 0 &&
+    finaltotalCurry == 0 &&
+    finaltotalKilawin == 0 &&
+    finaltotalSinigang == 0
+  ) {
+    document.getElementById('myModalBuang').style.display = 'flex';
+  } else {
+    const orderSummary = document.getElementById('orderSummary');
+    const totalPrice = document.getElementById('totalPrice');
+    let total = 0;
 
-// Get the modal
-var modal = document.getElementById("myModal");
+    orderSummary.innerHTML = '';
+    if (finaltotalPakbet > 0) {
+      const quantity = document.getElementById("quantity").value;
+      total += finaltotalPakbet;
+      orderSummary.innerHTML += `
+        <div class="order-item">
+          <p><strong>Pakbet</strong> (SARING GULAY WITH TOYO)</p>
+          <p>Quantity: ${quantity}</p>
+          <p>Price: ₱${fixedPrice1.toFixed(2)}</p>
+          <p>Subtotal: ₱${finaltotalPakbet.toFixed(2)}</p>
+        </div>`;
+    }
+    if (finaltotalMongo > 0) {
+      const quantity = document.getElementById("quantity1").value;
+      total += finaltotalMongo;
+      orderSummary.innerHTML += `
+        <div class="order-item">
+          <p><strong>Mongo</strong> (Mung bean soup with pork)</p>
+          <p>Quantity: ${quantity}</p>
+          <p>Price: ₱${fixedPrice2.toFixed(2)}</p>
+          <p>Subtotal: ₱${finaltotalMongo.toFixed(2)}</p>
+        </div>`;
+    }
+    if (finaltotalBihon > 0) {
+      const quantity = document.getElementById("quantity2").value;
+      total += finaltotalBihon;
+      orderSummary.innerHTML += `
+        <div class="order-item">
+          <p><strong>Bihon</strong> (PAMPAHABA NG BUHAY)</p>
+          <p>Quantity: ${quantity}</p>
+          <p>Price: ₱${fixedPrice3.toFixed(2)}</p>
+          <p>Subtotal: ₱${finaltotalBihon.toFixed(2)}</p>
+        </div>`;
+    }
+    if (finaltotalCurry > 0) {
+      const quantity = document.getElementById("quantity3").value;
+      total += finaltotalCurry;
+      orderSummary.innerHTML += `
+        <div class="order-item">
+          <p><strong>Curry</strong> (GOLDENSTATE)</p>
+          <p>Quantity: ${quantity}</p>
+          <p>Price: ₱${fixedPrice4.toFixed(2)}</p>
+          <p>Subtotal: ₱${finaltotalCurry.toFixed(2)}</p>
+        </div>`;
+    }
+    if (finaltotalKilawin > 0) {
+      const quantity = document.getElementById("quantity4").value;
+      total += finaltotalKilawin;
+      orderSummary.innerHTML += `
+        <div class="order-item">
+          <p><strong>Kilawin</strong> (HILAW PERO LAMI)</p>
+          <p>Quantity: ${quantity}</p>
+          <p>Price: ₱${fixedPrice5.toFixed(2)}</p>
+          <p>Subtotal: ₱${finaltotalKilawin.toFixed(2)}</p>
+        </div>`;
+    }
+    if (finaltotalSinigang > 0) {
+      const quantity = document.getElementById("quantity5").value;
+      total += finaltotalSinigang;
+      orderSummary.innerHTML += `
+        <div class="order-item">
+          <p><strong>Sinigang</strong> (ASLOM PERO LAMI)</p>
+          <p>Quantity: ${quantity}</p>
+          <p>Price: ₱${fixedPrice6.toFixed(2)}</p>
+          <p>Subtotal: ₱${finaltotalSinigang.toFixed(2)}</p>
+        </div>`;
+    }
 
-// Get the button that opens the modal
-var btn = document.querySelector(".open-modal-btn");
-
-// Get the <span> element that closes the modal
-var span = document.querySelector(".close-btn");
-
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "flex";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+    totalPrice.innerHTML = `Total: ₱${total.toFixed(2)}`;
+    document.getElementById('myModal').style.display = 'flex';
   }
-};
+});
 
-// boang modal
-const buangModal = document.getElementById("myModalBuang");
-const buangBtn = document.getElementById("open-modal-btn-buang");
-const buangClose = document.querySelector(".close-btn-buang");
-buangBtn.onclick = function () {
-  buangModal.style.display = "flex";
-};
-buangClose.onclick = function () {
-  buangModal.style.display = "none";
-};
+document.getElementById('boangCloseBtn').addEventListener('click', function () {
+  document.getElementById('myModalBuang').style.display = 'none';
+});
 
-window.onclick = function (event) {
-  if (event.target == buangModal) {
-    modal.style.display = "none";
-  }
-};
-
-// --------------- icon modal -----------------------
-const iconModal = document.getElementById("iconModal");
-const iconbtn = document.querySelector(".btn-open-icon");
-
-iconbtn.onclick = function () {
-  iconModal.style.display = "flex";
-};
-
-const closeBtnMap = document.querySelector(".modal-content-map");
-closeBtnMap.onclick = function () {
-  iconModal.style.display = "none";
-};
-window.onclick = function (evewnt) {
-  if (event.target == iconModal) {
-    iconModal.style.display = "none";
-  }
-};
-
-// ---------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   calculateTotalForPakbet();
   calculateTotalForMongo();
@@ -171,7 +179,6 @@ document.addEventListener("DOMContentLoaded", function () {
   calculateTotalForSinigang();
 });
 
-// Add event listeners for quantity inputs
 document
   .getElementById("quantity")
   .addEventListener("input", calculateTotalForPakbet);
@@ -191,7 +198,7 @@ document
   .getElementById("quantity5")
   .addEventListener("input", calculateTotalForSinigang);
 
-// -------------SLIDESHOW
+// Slideshow
 let slideIndex = 0;
 showSlides();
 
@@ -203,7 +210,7 @@ function showSlides() {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
+  if (slideIndex > slides.length) { slideIndex = 1; }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
@@ -211,3 +218,16 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+// Icon modal
+const iconModal = document.getElementById("iconModal");
+const iconbtn = document.querySelector(".btn-open-icon");
+
+iconbtn.onclick = function () {
+  iconModal.style.display = "flex";
+};
+
+const closeBtnMap = document.querySelector(".modal-content-map");
+closeBtnMap.onclick = function () {
+  iconModal.style.display = "none";
+};

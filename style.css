@@ -194,7 +194,7 @@ footer section p {
   /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 105%;
   /* Could be more or less, depending on screen size */
   max-width: 500px;
   text-align: center;
@@ -246,7 +246,7 @@ footer section p {
 
 /* ---------------modal cancelation */
 .cancelbtn,
-.deletebtn {
+.reservebtn {
   float: left;
   width: 50%;
 }
@@ -266,7 +266,7 @@ clearfix::after {
 }
 
 /* Add a color to the delete button */
-.deletebtn {
+.reservebtn {
   background-color: #f44336;
 }
 
@@ -276,7 +276,7 @@ clearfix::after {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
+  background-color: #3998e6;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -370,4 +370,18 @@ img {
   .text {
     font-size: 11px
   }
+}
+
+/* ----------------ORDER SUMMARY */
+.order-summary {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.order-item {
+  margin-bottom: 15px;
+}
+
+.order-item p {
+  margin: 5px 0;
 }

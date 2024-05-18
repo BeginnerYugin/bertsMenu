@@ -18,32 +18,49 @@
                     <br> Just Run-In </br>
                 <p>Text: 0912 ikaw na bahala sa pito</p>
                 </p>
-                <h2>Automatic Slideshow</h2>
-                <p>Change image every 2 seconds:</p>
             </div>
             <!-- --------------slideshow -->
 
             <div class="slideshow-container">
 
                 <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="./pakbet.jpg" style="width:120%" height="250px">
-                    <div class="text">Caption Text</div>
+                    <div class="numbertext">PAKBET</div>
+                    <img src="./pakbet.jpg" style="width:450px" height="200px">
+                    <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="./mongo.jpg" style="width:150%">
-                    <div class="text">Caption Two</div>
+                    <div class="numbertext">MONGO</div>
+                    <img src="./mongo.jpg" style="width:450px" height="200px">
+                    <div class="text"></div>
                 </div>
 
                 <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="./bihon.jpg" style="width:150%">
-                    <div class="text">Caption Three</div>
+                    <div class="numbertext">BIHON</div>
+                    <img src="./bihon.jpg" style="width:450px" height="200px">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">CURRY</div>
+                    <img src="./curry.jpg" style="width:450px" height="200px">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">KILAWIN</div>
+                    <img src="./kilawin.jpg" style="width:450px" height="200px">
+                    <div class="text"></div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">SINIGANG</div>
+                    <img src="./sinigang.jpg" style="width:450px" height="200px">
+                    <div class="text"></div>
                 </div>
 
             </div>
+
         </div>
         <br>
 
@@ -51,8 +68,11 @@
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
-
+        <!-------------slideshow end -->
 
     </header>
     <main>
@@ -208,35 +228,25 @@
         <div class="modal-center modal-hide-and-show" id="modal-hide-and-show">
             <button class="open-modal-btn" id="BotttonMoDiha">RESERVE ORDER</button>
         </div>
-        <div class="modal-center modal-hide-and-show-buang" id="modal-hide-and-show-buang">
+
+
+
+
+
+        <!-- <div class="modal-center modal-hide-and-show-buang" id="modal-hide-and-show-buang">
             <button class="open-modal-btn-buang" id="open-modal-btn-buang">RESERVE ORDER</button>
-        </div>
+        </div> -->
         <br>
         <br>
 
         <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <h2>RESERVATION HAS SEND TO BERTS MOTHER</h2>
-                <p>WAIT UNTIL NEXT DAY</p>
-
-            </div>
-        </div>
-
-        <!-- The Buang Modal -->
-
-
-        <div id="myModalBuang" class="modalBuang">
-            <!-- Modal content -->
-            <span onclick="document.getElementById('myModalBuang').style.display='none'" class="close"
-                title="Close Modal">&times;</span>
-
-            <form class="modal-content-buang" action="/action_page.php">
+        <!-- <div id="myModal" class="modal"> -->
+        <!-- Modal content -->
+        <!-- <form class="modal-content" action="/action_page.php">
                 <div class="container">
-                    <span class="close-btn-buang">&times;</span>
-                    <h2>AYAW PAGDALI WALA PAKA KA PILI</h2>
+                    <span class="close-btn" onclick="document.getElementById('myModal').style.display='none'"
+                        title="Close Modal">&times;</span>
+                    <h2>ORDER SUMMARY</h2>
 
                     <div class="clearfix">
                         <button type="button" class="cancelbtn">Cancel</button>
@@ -244,6 +254,39 @@
                     </div>
                 </div>
             </form>
+        </div> -->
+
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close-btn" onclick="document.getElementById('myModal').style.display='none'"
+                    title="Close Modal">&times;</span>
+                <h2>ORDER SUMMARY</h2>
+                <div id="orderSummary" class="order-summary"></div>
+                <div id="totalPrice" class="total-price"></div>
+                <div class="clearfix">
+                    <button type="button" class="cancelbtn"
+                        onclick="document.getElementById('myModal').style.display='none'">Cancel</button>
+                    <button type="button" class="reservebtn">RESERVE</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- The Buang Modal -->
+
+
+        <div id="myModalBuang" class="modalBuang">
+            <!-- Modal content -->
+            <div class="modal-content-buang" action="/action_page.php">
+                <div class="container">
+                    <span class="close-btn-buang" id="boangCloseBtn">&times;</span>
+                    <h2>WARNING!</h2>
+                    <p>ORDER SA DAW EH</p>
+
+                </div>
+            </div>
         </div>
 </body>
 
