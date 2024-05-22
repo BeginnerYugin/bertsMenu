@@ -1,4 +1,4 @@
-const fixedPrice1 = 25; // Fixed price per piece
+const fixedPrice1 = 25;
 const fixedPrice2 = 35;
 const fixedPrice3 = 30;
 const fixedPrice4 = 35;
@@ -228,6 +228,26 @@ iconbtn.onclick = function () {
 };
 
 const closeBtnMap = document.querySelector(".modal-content-map");
+
 closeBtnMap.onclick = function () {
   iconModal.style.display = "none";
 };
+
+window.onclick = function (event) {
+  if (event.target == iconModal) {
+    iconModal.style.display = "none";
+  }
+}
+// ---------------------------PRINT 
+document.addEventListener("DOMContentLoaded", function () {
+  const cancelbtn = document.getElementById("cancelbtn");
+  const printbtn = document.getElementById("reservebtn")
+
+  if (reservebtn) {
+    onclick = function () {
+      printbtn.window.print();
+    };
+  } else {
+    console.error("Print button not found");
+  }
+});
