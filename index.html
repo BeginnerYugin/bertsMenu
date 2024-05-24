@@ -13,57 +13,45 @@
         <div style="display: flex;">
             <div>
                 <h1 class="sud_anTxt">CHOOSE YOUR SUD AN</h1>
-
                 <p style="color :rgb(0, 0, 0)"> Strictly no Walk-In
                     <br> Just Run-In </br>
                 <p>Text: 0912 ikaw na bahala sa pito</p>
                 </p>
             </div>
-            <!-- --------------slideshow -->
-
             <div class="slideshow-container">
-
                 <div class="mySlides fade">
                     <div class="numbertext">PAKBET</div>
                     <img src="./pakbet.jpg" style="width:450px" height="200px">
                     <div class="text"></div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">MONGO</div>
                     <img src="./mongo.jpg" style="width:450px" height="200px">
                     <div class="text"></div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">BIHON</div>
                     <img src="./bihon.jpg" style="width:450px" height="200px">
                     <div class="text"></div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">CURRY</div>
                     <img src="./curry.jpg" style="width:450px" height="200px">
                     <div class="text"></div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">KILAWIN</div>
                     <img src="./kilawin.jpg" style="width:450px" height="200px">
                     <div class="text"></div>
                 </div>
-
                 <div class="mySlides fade">
                     <div class="numbertext">SINIGANG</div>
                     <img src="./sinigang.jpg" style="width:450px" height="200px">
                     <div class="text"></div>
                 </div>
-
             </div>
-
         </div>
         <br>
-
         <div style="text-align:center">
             <span class="dot"></span>
             <span class="dot"></span>
@@ -72,13 +60,9 @@
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-        <!-------------slideshow end -->
-
     </header>
     <main>
-
         <h1 style="color :rgb(0, 0, 0);">MENU</h1>
-
         <div class="grid-container">
             <div class="image-container">
                 <figure>
@@ -94,7 +78,6 @@
                                         <input type="number" id="quantity" name="quantity" min="0" step="1"
                                             oninput="calculateTotalForPakbet()">
                                     </div>
-
                                     <div class="form-group price-info">
                                         <span class="total-price">Total Price: <span
                                                 id="totalPakbet">₱0.00</span></span>
@@ -104,7 +87,6 @@
                         </div>
                     </div>
                 </figure>
-
                 <figure>
                     <img src="./mongo.jpg" alt="MONGO NA GULAY">
                     <figcaption>MONGO NA GULAY</figcaption>
@@ -117,7 +99,6 @@
                                     <input type="number" id="quantity1" name="quantity1" min="0" step="1"
                                         oninput="calculateTotalForMongo()">
                                 </div>
-
                                 <div class="form-group price-info">
                                     <span class="total-price">Total Price: <span id="totalMongo">₱0.00</span></span>
                                 </div>
@@ -125,7 +106,6 @@
                         </form>
                     </div>
                 </figure>
-
                 <figure>
                     <img src="./bihon.jpg" alt="BIHON NA LAMIIH">
                     <figcaption>BIHON NA LAMIIH</figcaption>
@@ -138,7 +118,6 @@
                                     <input type="number" id="quantity2" name="quantity2" min="0" step="1"
                                         oninput="calculateTotalForBihon()">
                                 </div>
-
                                 <div class="form-group price-info">
                                     <span class="total-price">Total Price: <span id="totalBihon">₱0.00</span></span>
                                 </div>
@@ -161,7 +140,6 @@
                                         <input type="number" id="quantity3" name="quantity3" min="0" step="1"
                                             oninput="calculateTotalForCurry()">
                                     </div>
-
                                     <div class="form-group price-info">
                                         <span class="total-price">Total Price: <span id="totalCurry">₱0.00</span></span>
                                     </div>
@@ -170,7 +148,6 @@
                         </div>
                     </div>
                 </figure>
-
                 <figure>
                     <img src="./kilawin.jpg" alt="KILAWIN TIKA UNYA" class=" picture">
                     <figcaption>KILAWIN TIKA UNYA</figcaption>
@@ -184,7 +161,6 @@
                                         <input type="number" id="quantity4" name="quantity4" min="0" step="1"
                                             oninput="calculateTotalForKilawin()">
                                     </div>
-
                                     <div class="form-group price-info">
                                         <span class="total-price">Total Price: <span
                                                 id="totalKilawin">₱0.00</span></span>
@@ -194,7 +170,6 @@
                         </div>
                     </div>
                 </figure>
-
                 <figure>
                     <img src="./sinigang.jpg" alt="SINIGANGBANG" class=" picture">
                     <figcaption>SINIGANGBANG</figcaption>
@@ -208,7 +183,6 @@
                                         <input type="number" id="quantity5" name="quantity5" min="0" step="1"
                                             oninput="calculateTotalForSinigang()">
                                     </div>
-
                                     <div class="form-group price-info">
                                         <span class="total-price">Total Price: <span
                                                 id="totalSinigang">₱0.00</span></span>
@@ -220,45 +194,15 @@
                 </figure>
             </div>
         </div>
-
         <h2>
             <div id="">Total: <span id="total"></span></div>
         </h2>
-        <!-- button -->
         <div class="modal-center modal-hide-and-show" id="modal-hide-and-show">
             <button class="open-modal-btn" id="BotttonMoDiha">RESERVE ORDER</button>
         </div>
-
-
-
-
-
-        <!-- <div class="modal-center modal-hide-and-show-buang" id="modal-hide-and-show-buang">
-            <button class="open-modal-btn-buang" id="open-modal-btn-buang">RESERVE ORDER</button>
-        </div> -->
         <br>
         <br>
-
-        <!-- The Modal -->
-        <!-- <div id="myModal" class="modal"> -->
-        <!-- Modal content -->
-        <!-- <form class="modal-content" action="/action_page.php">
-                <div class="container">
-                    <span class="close-btn" onclick="document.getElementById('myModal').style.display='none'"
-                        title="Close Modal">&times;</span>
-                    <h2>ORDER SUMMARY</h2>
-
-                    <div class="clearfix">
-                        <button type="button" class="cancelbtn">Cancel</button>
-                        <button type="button" class="deletebtn">Delete</button>
-                    </div>
-                </div>
-            </form>
-        </div> -->
-
-
         <div id="myModal" class="modal">
-            <!-- Modal content -->
             <div class="modal-content">
                 <span class="close-btn" onclick="document.getElementById('myModal').style.display='none'"
                     title="Close Modal">&times;</span>
@@ -269,31 +213,20 @@
                     <button type="button" class="cancelbtn" id="cancelbtn"
                         onclick="document.getElementById('myModal').style.display='none'">Cancel</button>
                     <button type="button" class="reservebtn" id="reservebtn">Print Receipt</button>
-
                 </div>
             </div>
         </div>
-
-
-        <!-- The Buang Modal -->
-
-
         <div id="myModalBuang" class="modalBuang">
-            <!-- Modal content -->
             <div class="modal-content-buang" action="/action_page.php">
                 <div class="container">
                     <span class="close-btn-buang" id="boangCloseBtn">&times;</span>
                     <h2>WARNING!</h2>
                     <p>ORDER SA DAW EH</p>
-
                 </div>
             </div>
         </div>
 </body>
-
-
 </main>
-
 <footer class="footer">
     <div>
         <section>
@@ -314,7 +247,6 @@
             <h2>Location</h2>
             <p>Santiago Boulevard</p>
             <p>&copy; Developer Eugene Chris Elmido</p>
-
             <div class="divideMap">
                 <div>
                     <img src="./icons8-globe-50.png" alt="icon" class="icon btn-open-icon">
@@ -324,25 +256,16 @@
                 </div>
             </div>
             <div id="iconModal" class="modal">
-                <!-- Modal content -->
                 <div class="modal-content-map">
                     <span class="close-btn-map" id="close-btn-map">&times;</span>
                     <p><iframe
                             src="https://www.google.com/maps/embed?pb=!4v1715845300868!6m8!1m7!1sCAoSLEFGMVFpcE5IVkNNTlpuRDhMWmF1Ni0td0thLTRLbmo4VlFidHVQcEh5VGR2!2m2!1d5.4123538!2d125.4273244!3f100!4f0!5f0.7820865974627469"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe></p>
-
                 </div>
             </div>
-
         </section>
     </div>
-
-
-
 </footer>
 <script src="./index.js"></script>
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
