@@ -90,3 +90,44 @@ const calculateGrandTotal = () => {
   document.getElementById('total').innerText = `₱${grandTotal.toFixed(2)}`;
 };
 
+let slideIndex = 0; // Initialize slideIndex
+
+// Call showSlides function to start the slideshow
+showSlides();
+
+// Function to display slideshow
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) { slideIndex = 1; }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+// Icon modal map
+const iconModal = document.getElementById("iconModal");
+const iconbtn = document.querySelector(".btn-open-icon");
+
+iconbtn.onclick = function () {
+  iconModal.style.display = "flex";
+};
+
+const closeBtnMap = document.querySelector(".modal-content-map");
+
+closeBtnMap.onclick = function () {
+  iconModal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == iconModal) {
+    iconModal.style.display = "none";
+  }
+}
