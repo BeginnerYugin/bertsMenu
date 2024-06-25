@@ -4,10 +4,18 @@ body {
   width: 100vw;
 }
 
+h1.sud_anTxt {
+  border-style: solid;
+  border-color: black;
+  background-color: darkgreen;
+  color: #fefefe;
+}
+
+
 .header-box {
   background-color: #f8ab05;
   /* Light gray background */
-  color: #f5efef;
+  color: #f2f2f2;
   /* Dark text color */
   padding: 20px;
   /* Padding inside the box */
@@ -95,27 +103,6 @@ input[type="number"] {
 
 .quantity {
   margin: 0%;
-}
-
-footer section h2,
-footer section p {
-  margin: 0%;
-}
-
-footer section h2 {
-  margin-top: 5px;
-  margin-bottom: 0px;
-}
-
-footer section p {
-  margin: 0%;
-}
-
-.footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: #eec876;
-  padding: 20px;
 }
 
 #total {
@@ -339,8 +326,8 @@ img {
 .dot {
   height: 15px;
   width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
+  margin: 0px;
+  background-color: #f8ab05;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -385,4 +372,56 @@ img {
 
 .order-item p {
   margin: 5px 0;
+}
+
+footer section h2,
+footer section p {
+  margin: 0%;
+}
+
+footer section h2 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+footer section p {
+  margin: 0%;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #eec876;
+  padding: 20px;
+  font-size: small;
+  font-family: Arial, sans-serif;
+
+}
+
+/* -------------------SOCIAL MEDIA */
+.image-follow {
+  background-color: #eec876;
+  padding: 0px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.image-follow h2 {
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.image-follow img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.image-follow img:hover {
+  transform: scale(1.1);
+}
+
+.image-follow section {
+  display: inline-block;
 }
