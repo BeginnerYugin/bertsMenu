@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body style="background-color:rgb(195, 205, 223);">
+<body style="background-image: url('./vegies.jpg'); background-size: cover; background-position: center;">
     <header class="header-box">
         <div style="display: flex;">
+
+            <!-- <body style="background-color:rgb(195, 205, 223);">
+    <header class="header-box">
+        <div style="display: flex;"> -->
             <div>
                 <h1 class="sud_anTxt">CHOOSE YOUR SUD AN</h1>
                 <p style="color :rgb(0, 0, 0)"> Strictly no Walk-In
@@ -62,7 +66,7 @@
         </div>
     </header>
     <main>
-        <h1 style="color :rgb(0, 0, 0);">MENU</h1>
+        <h1 style="color: aliceblue;">MENU</h1>
         <div class="grid-container">
             <div class="image-container">
                 <figure>
@@ -198,7 +202,7 @@
             <div id="">Total: <span id="total"></span></div>
         </h2>
         <div class="modal-center modal-hide-and-show" id="modal-hide-and-show">
-            <button class="open-modal-btn" id="BotttonMoDiha">RESERVE ORDER</button>
+            <button class="open-modal-btn" id="ButtonMoDiha">RESERVE ORDER</button>
         </div>
         <br>
         <br>
@@ -222,7 +226,8 @@
         <div id="myModalBuang" class="modalBuang">
             <div class="modal-content-buang" action="/action_page.php">
                 <div class="container">
-                    <span class="close-btn-buang" id="boangCloseBtn">&times;</span>
+                    <span class="close-btn-buang"
+                        onclick="document.getElementById('myModalBuang').style.display='none'">&times;</span>
                     <h2>WARNING!</h2>
                     <p>ORDER SA DAW EH</p>
                 </div>
@@ -244,20 +249,20 @@
     <div>
         <section>
             <h2>CONTACT US</h2>
-            <br>Email: BERTS123@gmail.com</br>
-            <p>Phone: 09123456789</p>
+            <br>EMAIL: BERTS123@gmail.com</br>
+            <p>PHONE: 09123456789</p>
         </section>
     </div>
     <div>
         <section>
             <h2>LOCATION</h2>
-            <br>Santiago Boulevard</br>
+            <br>SANTIAGO BOULEVARD</br>
             <div class="divideMap">
                 <div>
                     <img src="./icons8-globe-50.png" alt="icon" class="icon btn-open-icon">
                 </div>
                 <div class="padding-top">
-                    PALIHOG PINDUTA
+                    TAP TO SEE LOCATION
                 </div>
             </div>
             <div id="iconModal" class="modal">
@@ -269,7 +274,7 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe></p>
                 </div>
             </div>
-            <p>&copy; Developer Eugene Chris Elmido</p>
+            <br>&copy; DEVELOP EUGENE CHRIS ELMIDO</br>
         </section>
     </div>
     <div class="image-follow">

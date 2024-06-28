@@ -1,5 +1,4 @@
-
-document.getElementById('BotttonMoDiha').onclick = function () {
+document.getElementById('ButtonMoDiha').onclick = function () {
   let orderSummaryText = '';
   let total = 0;
 
@@ -20,10 +19,15 @@ document.getElementById('BotttonMoDiha').onclick = function () {
     }
   });
 
-  orderSummaryText += `<br><strong>Grand Total: ₱${total.toFixed(2)}</strong>`;
-
-  document.getElementById('orderSummary').innerHTML = orderSummaryText;
-  document.getElementById('myModal').style.display = 'block';
+  if (total > 0) {
+    orderSummaryText += `<br><strong>Grand Total: ₱${total.toFixed(2)}</strong>`;
+    document.getElementById('orderSummary').innerHTML = orderSummaryText;
+    document.getElementById('myModal').style.display = 'block';
+    document.getElementById('myModalBuang').style.display = 'none';
+  } else {
+    document.getElementById('myModalBuang').style.display = 'block';
+    document.getElementById('myModal').style.display = 'none';
+  }
 };
 
 document.getElementById('reservebtn').onclick = function () {
@@ -112,6 +116,7 @@ function showSlides() {
   dots[slideIndex - 1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
 // Icon modal map
 const iconModal = document.getElementById("iconModal");
 const iconbtn = document.querySelector(".btn-open-icon");
@@ -130,4 +135,4 @@ window.onclick = function (event) {
   if (event.target == iconModal) {
     iconModal.style.display = "none";
   }
-}
+};

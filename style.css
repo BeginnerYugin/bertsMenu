@@ -42,7 +42,7 @@ main {
   /* Distributes space evenly */
   align-items: center;
   /* Aligns images vertically */
-  gap: 10px;
+  gap: 20px;
   /* Optional: spacing between images */
 }
 
@@ -51,6 +51,9 @@ main {
   /* Ensures images are responsive */
   height: auto;
   /* Maintains aspect ratio */
+
+  border-radius: 50%;
+
 }
 
 .form-container {
@@ -108,16 +111,19 @@ input[type="number"] {
 #total {
   font-weight: bold;
   margin-top: 20px;
+  color: white;
 }
 
 .grid-container {
   display: grid;
+  color: #f2f2f2;
 }
 
 .open-modal-btn {
-  padding: 10px 20px;
+  padding: 15px 15px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 .open-modal-btn-buang {
@@ -243,9 +249,6 @@ clearfix::after {
   clear: both;
   display: table;
 }
-
-/* Change styles for cancel button and delete button on extra small screens */
-@media screen and (max-width: 300px) {}
 
 .cancelbtn {
   background-color: #ccc;
@@ -374,6 +377,8 @@ img {
   margin: 5px 0;
 }
 
+/* -----------FOTER */
+
 footer section h2,
 footer section p {
   margin: 0%;
@@ -399,6 +404,7 @@ footer section p {
 }
 
 /* -------------------SOCIAL MEDIA */
+
 .image-follow {
   background-color: #eec876;
   padding: 0px;
@@ -425,3 +431,11 @@ footer section p {
 .image-follow section {
   display: inline-block;
 }
+
+/* body {
+  background-image: url('./vegies.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
