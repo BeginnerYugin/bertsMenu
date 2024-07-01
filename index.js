@@ -136,3 +136,69 @@ window.onclick = function (event) {
     iconModal.style.display = "none";
   }
 };
+// ----------------- TOGGLE MENU 
+document.getElementById('toggleMenuButton').addEventListener('click', function () {
+  var content = document.getElementById('content');
+  var main_div = document.getElementById('main-div');
+
+
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    main_div.style.display = 'none';
+    this.textContent = 'HIDE MENU';
+  } else {
+    content.style.display = 'none';
+    main_div.style.display = 'flex';
+    this.textContent = 'MENU';
+  }
+});
+// ------------------------location
+document.getElementById('toggleLocationButton').addEventListener('click', function () {
+  var content = document.getElementById('contentlocation');
+  var main_div = document.getElementById('main-div');
+
+  if (content.style.display === 'none' || content.style.display === '') {
+    main_div.style.display = 'none';
+
+    content.style.display = 'block';
+    this.textContent = 'HIDE LOCATION';
+  } else {
+    content.style.display = 'none';
+    main_div.style.display = 'flex';
+
+    this.textContent = 'LOCATION';
+  }
+});
+document.getElementById('toggleAboutusButton').addEventListener('click', function () {
+  var content = document.getElementById('contentAboutus');
+  var main_div = document.getElementById('main-div');
+  if (content.style.display === 'none' || content.style.display === '') {
+    main_div.style.display = 'none';
+    content.style.display = 'block';
+    this.textContent = 'HIDE ABOUT US';
+  } else {
+    main_div.style.display = 'flex';
+    content.style.display = 'none';
+    this.textContent = 'ABOUT US';
+  }
+});
+document.getElementById('toggleContactusButton').addEventListener('click', function () {
+  var content = document.getElementById('contentContactus');
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    this.textContent = 'HIDE CONTACT US';
+  } else {
+    content.style.display = 'none';
+    this.textContent = 'CONTACT US';
+  }
+});
+document.getElementById('toggleFollowusButton').addEventListener('click', function () {
+  var content = document.getElementById('contentFollowus');
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    this.textContent = 'HIDE FOLLOW US';
+  } else {
+    content.style.display = 'none';
+    this.textContent = 'FOLLOW US';
+  }
+});

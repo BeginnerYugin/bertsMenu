@@ -5,15 +5,11 @@ body {
 }
 
 h1.sud_anTxt {
-  border-style: solid;
-  border-color: black;
-  background-color: darkgreen;
   color: #fefefe;
 }
 
 
 .header-box {
-  background-color: #f8ab05;
   /* Light gray background */
   color: #f2f2f2;
   /* Dark text color */
@@ -34,6 +30,28 @@ h1.sud_anTxt {
 
 main {
   margin-left: 20px;
+}
+
+/* --------------MENU BUTTON */
+#content {
+  display: none;
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#toggleButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#toggleButton:hover {
+  background-color: #0056b3;
 }
 
 .image-container {
@@ -60,6 +78,7 @@ main {
   margin: 0 auto;
   font-family: Arial, sans-serif;
   gap: 20px;
+  color: #333;
 }
 
 .form-group {
@@ -111,7 +130,7 @@ input[type="number"] {
 #total {
   font-weight: bold;
   margin-top: 20px;
-  color: white;
+
 }
 
 .grid-container {
@@ -303,6 +322,7 @@ img {
   max-width: 1000px;
   position: relative;
   margin: auto;
+
 }
 
 /* Caption text */
@@ -330,14 +350,13 @@ img {
   height: 15px;
   width: 15px;
   margin: 0px;
-  background-color: #f8ab05;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active {
-  background-color: #717171;
+  background-color: none;
 }
 
 /* Fading animation */
@@ -377,7 +396,7 @@ img {
   margin: 5px 0;
 }
 
-/* -----------FOTER */
+/* -----------FOTER
 
 footer section h2,
 footer section p {
@@ -396,17 +415,17 @@ footer section p {
 .footer {
   display: flex;
   justify-content: space-between;
-  background-color: #eec876;
+  background: none;
   padding: 20px;
   font-size: small;
   font-family: Arial, sans-serif;
 
-}
+} */
 
 /* -------------------SOCIAL MEDIA */
 
 .image-follow {
-  background-color: #eec876;
+  background: none;
   padding: 0px;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -432,10 +451,90 @@ footer section p {
   display: inline-block;
 }
 
-/* body {
-  background-image: url('./vegies.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-} */
+#content {
+  display: none;
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* -------------------menu */
+#toggleMenuButton {
+  display: inline-block;
+  padding: 20px 20px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-style: italic;
+}
+
+#toggleMenuButton:hover {
+  background: none;
+}
+
+/* ----------------Toggle Location */
+#toggleLocationButton {
+  display: inline-block;
+  padding: 20px 20px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-style: italic;
+}
+
+#toggleLocationButton:hover {
+  background: none;
+}
+
+/* ----------------Toggle About us */
+#toggleAboutusButton {
+  display: inline-block;
+  padding: 20px 20px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-style: italic;
+}
+
+#toggleAboutusButton:hover {
+  background: none;
+}
+
+/* ----------------Toggle Contact us */
+#toggleContactusButton {
+  display: inline-block;
+  padding: 20px 20px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-style: italic;
+}
+
+#toggleContactusButton:hover {
+  background: none;
+}
+
+/* ----------------Toggle FOllow us */
+#toggleFollowusButton {
+  display: inline-block;
+  padding: 20px 20px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: large;
+  font-style: italic;
+}
+
+#toggleFollowusButton:hover {
+  background: none;
+}
