@@ -5,9 +5,13 @@ body {
 }
 
 h1.sud_anTxt {
-  color: #fefefe;
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
 
+.FIRST {
+  color: white;
+}
 
 .header-box {
   /* Light gray background */
