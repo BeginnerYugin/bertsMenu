@@ -94,29 +94,36 @@ const calculateGrandTotal = () => {
   document.getElementById('total').innerText = `₱${grandTotal.toFixed(2)}`;
 };
 
-let slideIndex = 0; // Initialize slideIndex
+var slideIndex = 1;
+showSlides(slideIndex);
 
-// Call showSlides function to start the slideshow
-showSlides();
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-// Function to display slideshow
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1; }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-
 // Icon modal map
 const iconModal = document.getElementById("iconModal");
 const iconbtn = document.querySelector(".btn-open-icon");
@@ -184,20 +191,26 @@ document.getElementById('toggleAboutusButton').addEventListener('click', functio
 });
 document.getElementById('toggleContactusButton').addEventListener('click', function () {
   var content = document.getElementById('contentContactus');
+  var main_div = document.getElementById('main-div');
   if (content.style.display === 'none' || content.style.display === '') {
+    main_div.style.display = 'none';
     content.style.display = 'block';
     this.textContent = 'HIDE CONTACT US';
   } else {
+    main_div.style.display = 'flex';
     content.style.display = 'none';
     this.textContent = 'CONTACT US';
   }
 });
 document.getElementById('toggleFollowusButton').addEventListener('click', function () {
   var content = document.getElementById('contentFollowus');
+  var main_div = document.getElementById('main-div');
   if (content.style.display === 'none' || content.style.display === '') {
+    main_div.style.display = 'none';
     content.style.display = 'block';
     this.textContent = 'HIDE FOLLOW US';
   } else {
+    main_div.style.display = 'flex';
     content.style.display = 'none';
     this.textContent = 'FOLLOW US';
   }

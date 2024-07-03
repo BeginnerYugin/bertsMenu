@@ -10,58 +10,22 @@
 
 <body
     style="background-image: url('./background.jpg.jpg'); background-size: cover; background-position: center; overflow-x: hidden; background-repeat: no-repeat;">
+    <div class="backOver"
+        style="position:absolute; top: 0; left: 0; right: 0; bottom: 0;background-color: black; z-index: -1; opacity: .3;">
+
+    </div>
     <header class="header-box">
         <div style="display: flex; position: fixed; top: 0; left: 0; right: 0; background: none;">
 
-            <section>
-                <button id="toggleMenuButton">MENU</button>
-
-            </section>
-
-            <section>
-                <button id="toggleLocationButton">LOCATION</button>
-
-
-            </section>
-
-            <section>
-                <button id="toggleAboutusButton">ABOUT US</button>
-
-            </section>
-
-            <section>
-                <button id="toggleContactusButton">CONTACT US</button>
-                <div id="contentContactus" style="display: none;">
-                    <h2>CONTACT US</h2>
-                    <br>EMAIL: BERTS123@gmail.com</br>
-                    <p>PHONE: 09123456789</p>
-                </div>
-            </section>
-
-            <section class="image-follow">
-                <button id="toggleFollowusButton">FOLLOW US</button>
-                <div id="contentFollowus" style="display: none;">
-                    <br>
-                    <div>
-                        <a href="https://www.facebook.com" target="_blank">
-                            <img id="facebook" src="./facebook.png" alt="Facebook" class="FOLLOW">
-                        </a>
-                        <a href="https://www.instagram.com" target="_blank">
-                            <img id="instagram" src="./instagram.png" alt="Instagram" class="FOLLOW">
-                        </a>
-                        <a href="https://www.twitter.com" target="_blank">
-                            <img id="twitter" src="./twitter.png" alt="Twitter" class="FOLLOW">
-                        </a>
-                        <a href="https://www.youtube.com" target="_blank">
-                            <img id="youtube" src="./youtube.png" alt="YouTube" class="FOLLOW">
-                        </a>
-                        <a href="https://www.telegram.org" target="_blank">
-                            <img id="telegram" src="./telegram.png" alt="Telegram" class="FOLLOW">
-                        </a>
-                    </div>
-                </div>
-            </section>
-
+            <ul>
+                <li>
+                    <button id="toggleMenuButton">MENU</button>
+                </li>
+                <li><button id="toggleLocationButton">LOCATION</button></li>
+                <li><button id="toggleAboutusButton">ABOUT US</button></li>
+                <li><button id="toggleContactusButton">CONTACT US</button></li>
+                <li><button id="toggleFollowusButton">FOLLOW US</button></li>
+            </ul>
         </div>
     </header>
     <main>
@@ -229,35 +193,87 @@
                 </div>
             </div>
 
-            <div id="contentlocation" style="display: none; background-color: white; margin:100px 0 ;">
+            <div id="contentlocation"
+                style="display: none; background-color: rgba(255, 255, 255, 0.4); margin:100px 0 ; padding: 50px;">
 
-                <br>SANTIAGO BOULEVARD</br>
-                <div class="divideMap">
+                <div style="text-align: center">
+                    <h2><b>LOCATION <b></h2>
+
+                    <p>SANTIAGO BOULEVARD</p>
+                    <div class="divideMap"
+                        style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+                        <div>
+                            <img src="./icons8-globe-50.png" alt="icon" class="icon btn-open-icon">
+                        </div>
+                        <div class="padding-top">
+                            TAP TO SEE LOCATION
+                        </div>
+                    </div>
+                    <div id="iconModal" class="modal">
+                        <div class="modal-content-map">
+                            <span class="close-btn-map" id="close-btn-map">&times;</span>
+                            <p><iframe
+                                    src="https://www.google.com/maps/embed?pb=!4v1715845300868!6m8!1m7!1sCAoSLEFGMVFpcE5IVkNNTlpuRDhMWmF1Ni0td0thLTRLbmo4VlFidHVQcEh5VGR2!2m2!1d5.4123538!2d125.4273244!3f100!4f0!5f0.7820865974627469"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        </div>
+                    </div>
+
+                    <br>&copy; DEVELOPER EUGENE CHRIS ELMIDO</br>
+                </div>
+            </div>
+            <div id="contentAboutus"
+                style="display: none; background-color: rgba(255, 255, 255, 0.4); margin:100px 0 ; padding: 50px;">
+                <div style="text-align: center;">
+                    <h2><b>Bert Reservation System</b></h2>
+                    <p>Online generated order</p>
+                    <p>Cleanliness is Must</p>
+                    <p>Taste Good</p>
+                </div>
+
+            </div>
+
+            <div id="contentContactus"
+                style="display: none; background-color: rgba(255, 255, 255, .4); margin:100px 0 ; padding: 50px;">
+                <div style=" text-align: center;">
                     <div>
-                        <img src="./icons8-globe-50.png" alt="icon" class="icon btn-open-icon">
-                    </div>
-                    <div class="padding-top">
-                        TAP TO SEE LOCATION
-                    </div>
-                </div>
-                <div id="iconModal" class="modal">
-                    <div class="modal-content-map">
-                        <span class="close-btn-map" id="close-btn-map">&times;</span>
-                        <p><iframe
-                                src="https://www.google.com/maps/embed?pb=!4v1715845300868!6m8!1m7!1sCAoSLEFGMVFpcE5IVkNNTlpuRDhMWmF1Ni0td0thLTRLbmo4VlFidHVQcEh5VGR2!2m2!1d5.4123538!2d125.4273244!3f100!4f0!5f0.7820865974627469"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        <h2>CONTACT US</h2>
+                        <br>EMAIL: BERTS123@gmail.com</br>
+                        <p>PHONE: 09123456789</p>
                     </div>
                 </div>
-                <br>&copy; DEVELOPER EUGENE CHRIS ELMIDO</br>
+            </div>
+            <div id="contentFollowus"
+                style="display: none; background-color: rgba(255, 255, 255, .4); margin:100px 0 ; padding: 50px;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <h2>FOLLOW US</h2>
+                    <div
+                        style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 20px;">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img id="facebook" src="./facebook.png" alt="Facebook" class="FOLLOW"
+                                style="width: 40px; height: 40px; margin: 10px 0;">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img id="instagram" src="./instagram.png" alt="Instagram" class="FOLLOW"
+                                style="width: 40px; height: 40px; margin: 10px 0;">
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img id="twitter" src="./twitter.png" alt="Twitter" class="FOLLOW"
+                                style="width: 40px; height: 40px; margin: 10px 0;">
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img id="youtube" src="./youtube.png" alt="YouTube" class="FOLLOW"
+                                style="width: 40px; height: 40px; margin: 10px 0;">
+                        </a>
+                        <a href="https://www.telegram.org" target="_blank">
+                            <img id="telegram" src="./telegram.png" alt="Telegram" class="FOLLOW"
+                                style="width: 40px; height: 40px; margin: 10px 0;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            </div>
-            <div id="contentAboutus" style="display: none; background-color: white; margin:100px 0 ;">
-                <br>Bert Reservation System</br>
-                <p>Online generated order</p>
-                <p>Cleanliness is Must</p>
-                <p>Taste Good</p>
-            </div>
 
         </div>
         <div class="MAIN-DIV" id="main-div" style="display: flex; margin-top: 150px; justify-content: space-around;">
@@ -266,14 +282,15 @@
             <div class="FIRST">
                 <div>
                     <h1 class="sud_anTxt">BERT'S KARENDERYA</h1>
-                    <p>We serve the best</p>
-                    <p>Pilipino dishes</p>
-                    <p>We accept catering services</p>
+                    <div style="font-family: Arial, Helvetica, sans-serif;">
+                        <p>We serve the best</p>
+                        <p>Pilipino dishes</p>
+                        <p>We accept catering services</p>
+                    </div>
                 </div>
 
             </div>
             <div class="SECOND">
-
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                         <div class="numbertext">PAKBET</div>
@@ -305,17 +322,25 @@
                         <img src="./sinigang.jpg" style="width: 450px; height: 200px;" alt="SINIGANG">
                         <div class="text"></div>
                     </div>
+
+                    <!-- Navigation arrows -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
+
                 <br>
+
+                <!-- Dots -->
                 <div style="text-align: center;">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
                 </div>
             </div>
+
         </div>
     </main>
     <script src="./index.js"></script>
