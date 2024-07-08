@@ -6,7 +6,8 @@ body {
 
 h1.sud_anTxt {
   color: white;
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header-box {
@@ -386,6 +387,7 @@ button:hover {
   margin-top: 20px;
   /* Adjust as needed */
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .sud_anTxt {
@@ -394,12 +396,7 @@ button:hover {
 }
 
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {
-    font-size: 11px
-  }
-}
+
 
 /* ----------------ORDER SUMMARY */
 .order-summary {
@@ -503,4 +500,11 @@ ul li {
   border-bottom: 2px solid white;
   text-wrap: nowrap;
   display: flex;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px
+  }
 }

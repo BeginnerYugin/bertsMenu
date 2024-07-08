@@ -143,20 +143,40 @@ window.onclick = function (event) {
     iconModal.style.display = "none";
   }
 };
+var menuBtn = document.getElementById('toggleMenuButton')
+
+var locationBtn = document.getElementById('toggleLocationButton')
+var aboutBtn = document.getElementById('toggleAboutusButton')
+var contactBtn = document.getElementById('toggleContactusButton')
+var followBtn = document.getElementById('toggleFollowusButton')
 // ----------------- TOGGLE MENU 
 document.getElementById('toggleMenuButton').addEventListener('click', function () {
   var content = document.getElementById('content');
+
+
   var main_div = document.getElementById('main-div');
 
 
   if (content.style.display === 'none' || content.style.display === '') {
     content.style.display = 'block';
+
+    locationBtn.style.pointerEvents = 'none';
+    aboutBtn.style.pointerEvents = 'none';
+    contactBtn.style.pointerEvents = 'none';
+    followBtn.style.pointerEvents = 'none';
+
+
     main_div.style.display = 'none';
     this.textContent = 'HIDE MENU';
   } else {
     content.style.display = 'none';
     main_div.style.display = 'flex';
     this.textContent = 'MENU';
+
+    locationBtn.style.pointerEvents = 'auto';
+    aboutBtn.style.pointerEvents = 'auto';
+    contactBtn.style.pointerEvents = 'auto';
+    followBtn.style.pointerEvents = 'auto';
   }
 });
 // ------------------------location
@@ -167,11 +187,23 @@ document.getElementById('toggleLocationButton').addEventListener('click', functi
   if (content.style.display === 'none' || content.style.display === '') {
     main_div.style.display = 'none';
 
+    menuBtn.style.pointerEvents = 'none';
+    aboutBtn.style.pointerEvents = 'none';
+    contactBtn.style.pointerEvents = 'none';
+    followBtn.style.pointerEvents = 'none';
+
     content.style.display = 'block';
     this.textContent = 'HIDE LOCATION';
   } else {
     content.style.display = 'none';
     main_div.style.display = 'flex';
+
+
+    menuBtn.style.pointerEvents = 'auto';
+    aboutBtn.style.pointerEvents = 'auto';
+    contactBtn.style.pointerEvents = 'auto';
+    followBtn.style.pointerEvents = 'auto';
+
 
     this.textContent = 'LOCATION';
   }
@@ -183,7 +215,23 @@ document.getElementById('toggleAboutusButton').addEventListener('click', functio
     main_div.style.display = 'none';
     content.style.display = 'block';
     this.textContent = 'HIDE ABOUT US';
+
+
+    menuBtn.style.pointerEvents = 'none';
+    locationBtn.style.pointerEvents = 'none';
+    contactBtn.style.pointerEvents = 'none';
+    followBtn.style.pointerEvents = 'none';
+
+
   } else {
+
+
+    menuBtn.style.pointerEvents = 'auto';
+    locationBtn.style.pointerEvents = 'auto';
+    contactBtn.style.pointerEvents = 'auto';
+    followBtn.style.pointerEvents = 'auto';
+
+
     main_div.style.display = 'flex';
     content.style.display = 'none';
     this.textContent = 'ABOUT US';
@@ -196,10 +244,21 @@ document.getElementById('toggleContactusButton').addEventListener('click', funct
     main_div.style.display = 'none';
     content.style.display = 'block';
     this.textContent = 'HIDE CONTACT US';
+
+
+    locationBtn.style.pointerEvents = 'none';
+    aboutBtn.style.pointerEvents = 'none';
+    menuBtn.style.pointerEvents = 'none';
+    followBtn.style.pointerEvents = 'none';
   } else {
     main_div.style.display = 'flex';
     content.style.display = 'none';
     this.textContent = 'CONTACT US';
+
+    locationBtn.style.pointerEvents = 'auto';
+    aboutBtn.style.pointerEvents = 'auto';
+    menuBtn.style.pointerEvents = 'auto';
+    followBtn.style.pointerEvents = 'auto';
   }
 });
 document.getElementById('toggleFollowusButton').addEventListener('click', function () {
@@ -209,9 +268,20 @@ document.getElementById('toggleFollowusButton').addEventListener('click', functi
     main_div.style.display = 'none';
     content.style.display = 'block';
     this.textContent = 'HIDE FOLLOW US';
+
+
+    locationBtn.style.pointerEvents = 'none';
+    aboutBtn.style.pointerEvents = 'none';
+    contactBtn.style.pointerEvents = 'none';
+    menuBtn.style.pointerEvents = 'none';
   } else {
     main_div.style.display = 'flex';
     content.style.display = 'none';
     this.textContent = 'FOLLOW US';
+
+    locationBtn.style.pointerEvents = 'auto';
+    aboutBtn.style.pointerEvents = 'auto';
+    contactBtn.style.pointerEvents = 'auto';
+    menuBtn.style.pointerEvents = 'auto';
   }
 });
