@@ -143,8 +143,8 @@ window.onclick = function (event) {
     iconModal.style.display = "none";
   }
 };
+//       ALL TOGGLE BUTTON
 var menuBtn = document.getElementById('toggleMenuButton')
-
 var locationBtn = document.getElementById('toggleLocationButton')
 var aboutBtn = document.getElementById('toggleAboutusButton')
 var contactBtn = document.getElementById('toggleContactusButton')
@@ -179,7 +179,7 @@ document.getElementById('toggleMenuButton').addEventListener('click', function (
     followBtn.style.pointerEvents = 'auto';
   }
 });
-// ------------------------location
+// ------------------------TOGGLE location
 document.getElementById('toggleLocationButton').addEventListener('click', function () {
   var content = document.getElementById('contentlocation');
   var main_div = document.getElementById('main-div');
@@ -208,6 +208,7 @@ document.getElementById('toggleLocationButton').addEventListener('click', functi
     this.textContent = 'LOCATION';
   }
 });
+// TOGGLE ABOUT US
 document.getElementById('toggleAboutusButton').addEventListener('click', function () {
   var content = document.getElementById('contentAboutus');
   var main_div = document.getElementById('main-div');
@@ -237,6 +238,7 @@ document.getElementById('toggleAboutusButton').addEventListener('click', functio
     this.textContent = 'ABOUT US';
   }
 });
+//  TOGGLE CONTACT US 
 document.getElementById('toggleContactusButton').addEventListener('click', function () {
   var content = document.getElementById('contentContactus');
   var main_div = document.getElementById('main-div');
@@ -261,6 +263,7 @@ document.getElementById('toggleContactusButton').addEventListener('click', funct
     followBtn.style.pointerEvents = 'auto';
   }
 });
+// TOGGLE FOLLOW US
 document.getElementById('toggleFollowusButton').addEventListener('click', function () {
   var content = document.getElementById('contentFollowus');
   var main_div = document.getElementById('main-div');
